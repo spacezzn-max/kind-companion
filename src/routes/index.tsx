@@ -28,7 +28,7 @@ const flavors = [
     notes: "Bioluminescent vanilla bean, ionized cream, ozone",
     level: "Classic",
     price: "$12",
-    accent: "var(--neon-cyan)",
+    accent: "oklch(0.5 0.1 60)",
   },
   {
     name: "Quantum Choc",
