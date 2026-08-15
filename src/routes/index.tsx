@@ -16,6 +16,7 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Single-origin small-batch coffee, roasted the day it ships.",
       },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: Index,
@@ -180,6 +181,9 @@ function Index() {
           <p>Roasted in small batches. Shipped everywhere.</p>
         </div>
       </footer>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 9999, fontSize: '2rem', fontWeight: 'bold' }}>
+        ola,tudo bem?
+      </div>
     </div>
   );
 }
