@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ember & Oak — Small-Batch Coffee Roasters" },
+      { title: "Cryo-Cream — Molecular Gelato Lab" },
       {
         name: "description",
         content:
-          "Small-batch coffee roasted to order and shipped within 24 hours. Single-origin beans with tasting notes you can actually taste.",
+          "Experience the next generation of ice cream. Molecularly synthesized and flash-frozen at absolute zero.",
       },
-      { name: "author", content: "Ember & Oak" },
-      { property: "og:title", content: "Ember & Oak — Small-Batch Coffee Roasters" },
+      { name: "author", content: "Cryo-Cream Labs" },
+      { property: "og:title", content: "Cryo-Cream — Molecular Gelato Lab" },
       {
         property: "og:description",
         content: "Single-origin beans roasted to order and shipped within 24 hours.",
@@ -101,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
