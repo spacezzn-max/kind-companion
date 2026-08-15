@@ -115,7 +115,7 @@ function Index() {
                     <div className="absolute w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
                     <div className="relative w-48 h-48 border border-primary/50 rounded-2xl animate-float flex items-center justify-center backdrop-blur-md overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 opacity-50"></div>
-                        <div className="text-4xl font-bold -rotate-45 text-white tracking-widest text-shadow-glow">CRYO</div>
+                        <div className="text-4xl font-bold -rotate-45 text-amber-50 tracking-widest text-shadow-glow">CRYO</div>
                     </div>
                 </div>
              </div>
