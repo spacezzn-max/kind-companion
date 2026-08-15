@@ -109,14 +109,13 @@ function Index() {
             </div>
           </div>
           <div className="relative">
-             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 blur-3xl -z-10 rounded-full"></div>
-             <div className="aspect-square rounded-3xl bg-gradient-to-br from-card to-background border border-border/50 flex items-center justify-center p-12 overflow-hidden shadow-2xl shadow-primary/20">
+             <div className="absolute inset-0 bg-primary/20 animate-pulse-glow rounded-full"></div>
+             <div className="relative aspect-square rounded-3xl glass-panel flex items-center justify-center p-12 overflow-hidden shadow-2xl">
                 <div className="w-full h-full relative flex items-center justify-center">
-                    {/* Abstract futuristic shape representation */}
-                    <div className="absolute w-64 h-64 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
-                    <div className="relative w-48 h-48 border-4 border-primary rounded-2xl rotate-45 flex items-center justify-center backdrop-blur-sm overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent/40 opacity-50"></div>
-                        <div className="text-4xl font-bold -rotate-45 text-white">ICE</div>
+                    <div className="absolute w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="relative w-48 h-48 border border-primary/50 rounded-2xl animate-float flex items-center justify-center backdrop-blur-md overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 opacity-50"></div>
+                        <div className="text-4xl font-bold -rotate-45 text-white tracking-widest text-shadow-glow">CRYO</div>
                     </div>
                 </div>
              </div>
