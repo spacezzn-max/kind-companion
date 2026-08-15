@@ -1,20 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import heroCoffee from "@/assets/hero-coffee.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ember & Oak — Roasted to Order, Shipped in 24h" },
+      { title: "Cryo-Cream — The Future of Frozen" },
       {
         name: "description",
         content:
-          "Ember & Oak roasts single-origin coffee in small batches and ships within 24 hours. Choose your roast, set your rhythm, skip anytime.",
+          "Molecular gelato crafted at absolute zero. Delivered in cryo-pods. Experience the next generation of ice cream.",
       },
-      { property: "og:title", content: "Ember & Oak — Roasted to Order, Shipped in 24h" },
+      { property: "og:title", content: "Cryo-Cream — The Future of Frozen" },
       {
         property: "og:description",
-        content: "Single-origin small-batch coffee, roasted the day it ships.",
+        content: "Molecular synthesis gelato, flash-frozen at -196°C.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -22,168 +21,195 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const roasts = [
+const flavors = [
   {
-    name: "Kayanza",
-    origin: "Burundi · Washed",
-    notes: "Blackcurrant, cocoa nib, orange peel",
-    level: "Light",
-    price: "$21",
+    name: "Neon Vanilla",
+    origin: "Molecular Synthesis · V3.2",
+    notes: "Bioluminescent vanilla bean, ionized cream, ozone",
+    level: "Classic",
+    price: "$12",
+    accent: "var(--neon-cyan)",
   },
   {
-    name: "Cerrado",
-    origin: "Brazil · Natural",
-    notes: "Praline, brown sugar, toasted almond",
-    level: "Medium",
-    price: "$19",
+    name: "Quantum Choc",
+    origin: "Deep Core Cocoa · V5.0",
+    notes: "70% dark matter chocolate, sea salt bits, fractal crunch",
+    level: "Intense",
+    price: "$14",
+    accent: "var(--neon-magenta)",
   },
   {
-    name: "Nightwatch",
-    origin: "Blend · House",
-    notes: "Dark chocolate, molasses, cedar",
-    level: "Dark",
-    price: "$18",
+    name: "Plasma Mint",
+    origin: "Hyper-Cool Extract · V2.1",
+    notes: "Cold-press mint, liquid nitrogen swirl, carbon crystals",
+    level: "Refresh",
+    price: "$13",
+    accent: "var(--neon-lime)",
   },
 ];
 
 const steps = [
-  { n: "01", t: "Pick a roast", d: "Three rotating origins, tasting notes written by the roaster." },
-  { n: "02", t: "Set the rhythm", d: "Weekly, fortnightly, or monthly. Skip or pause in a tap." },
-  { n: "03", t: "Roasted to order", d: "We roast the morning your bag ships. Never shelf-aged." },
+  { n: "01", t: "Molecular Synthesis", d: "Flavors engineered at the atomic level for maximum sensory impact." },
+  { n: "02", t: "Cryo-Flash Freeze", d: "Instant vitrification at -196°C using liquid nitrogen to prevent ice crystals." },
+  { n: "03", t: "Warp Speed Delivery", d: "Shipped in pressurized cryo-pods to maintain structural integrity." },
 ];
 
 function Index() {
   return (
-    <div className="min-h-screen">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <a href="/" className="font-display text-lg font-semibold tracking-tight">
-          Ember<span className="text-gradient-ember"> &amp; </span>Oak
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 border-b border-border/50 backdrop-blur-md sticky top-0 z-50">
+        <a href="/" className="font-display text-2xl font-bold tracking-tighter">
+          CRYO<span className="text-gradient-cryo">CREAM</span>
         </a>
-        <nav className="hidden items-center gap-8 text-sm text-muted-foreground sm:flex">
-          <a href="#roasts" className="transition-colors hover:text-foreground">
-            Roasts
+        <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground sm:flex">
+          <a href="#lab" className="transition-colors hover:text-primary">
+            Flavor Lab
           </a>
-          <a href="#how" className="transition-colors hover:text-foreground">
-            How it works
+          <a href="#process" className="transition-colors hover:text-primary">
+            The Process
           </a>
         </nav>
-        <Button variant="roast" size="sm" asChild>
-          <a href="#roasts">Start a box</a>
+        <Button variant="outline" size="sm" className="border-primary/50 hover:bg-primary/10 hover:text-primary">
+          Launch Pod
         </Button>
       </header>
 
       <main>
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-2 lg:pt-16">
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Small-batch · Roasted to order
-            </p>
-            <h1 className="mt-5 text-5xl leading-[1.05] sm:text-6xl">
-              Coffee that leaves the drum
-              <span className="text-gradient-ember"> the day it ships.</span>
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-16 lg:grid-cols-2 lg:pt-24">
+          <div className="relative z-10">
+            <div className="inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary mb-6">
+              Next-Gen Gelato
+            </div>
+            <h1 className="text-6xl font-bold leading-[1] sm:text-7xl lg:text-8xl tracking-tighter">
+              The Future
+              <span className="text-gradient-cryo block"> of Frozen.</span>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              We roast in 12kg batches, cup every lot twice, and put the roast date on the bag —
-              because freshness is the only shortcut worth taking.
+            <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              Experience molecular gelato vitrified at absolute zero. No crystals. No compromise. Just pure sensory distortion.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button variant="ember" size="lg" asChild>
-                <a href="#roasts">Choose your roast</a>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 rounded-full">
+                Enter Flavor Lab
               </Button>
-              <Button variant="quiet" size="lg" asChild>
-                <a href="#how">How it works</a>
+              <Button variant="ghost" size="lg" className="text-foreground hover:bg-white/5 px-8 rounded-full">
+                Our Tech
               </Button>
             </div>
-            <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6">
+            <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border/30 pt-8">
               {[
-                ["24h", "Roast to dispatch"],
-                ["12kg", "Batch size"],
-                ["9", "Origins this year"],
+                ["-196°C", "Vitrification"],
+                ["0.0μm", "Crystal Size"],
+                ["8.4k", "Simulations"],
               ].map(([v, l]) => (
                 <div key={l}>
-                  <dt className="font-display text-2xl">{v}</dt>
-                  <dd className="mt-1 text-xs text-muted-foreground">{l}</dd>
+                  <div className="font-display text-3xl font-bold text-foreground">{v}</div>
+                  <div className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">{l}</div>
                 </div>
               ))}
-            </dl>
+            </div>
           </div>
           <div className="relative">
-            <img
-              src={heroCoffee}
-              alt="Freshly roasted coffee beans pouring from a copper scoop onto dark slate"
-              width={1600}
-              height={1200}
-              className="w-full rounded-lg object-cover shadow-[var(--shadow-lift)]"
-            />
+             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 blur-3xl -z-10 rounded-full"></div>
+             <div className="aspect-square rounded-3xl bg-gradient-to-br from-card to-background border border-border/50 flex items-center justify-center p-12 overflow-hidden shadow-2xl shadow-primary/20">
+                <div className="w-full h-full relative flex items-center justify-center">
+                    {/* Abstract futuristic shape representation */}
+                    <div className="absolute w-64 h-64 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
+                    <div className="relative w-48 h-48 border-4 border-primary rounded-2xl rotate-45 flex items-center justify-center backdrop-blur-sm overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent/40 opacity-50"></div>
+                        <div className="text-4xl font-bold -rotate-45 text-white">ICE</div>
+                    </div>
+                </div>
+             </div>
           </div>
         </section>
 
-        <section id="roasts" className="bg-roast-gradient py-20 text-primary-foreground">
-          <div className="mx-auto max-w-6xl px-6">
-            <h2 className="text-3xl sm:text-4xl">On the bench this month</h2>
-            <p className="mt-3 max-w-lg text-sm text-primary-foreground/70">
-              Three lots, rotated as they sell through. Every bag is 250g whole bean or ground to
-              your brewer.
-            </p>
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {roasts.map((r) => (
+        <section id="lab" className="bg-deep-gradient py-32 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+          <div className="mx-auto max-w-6xl px-6 relative z-10">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+              <div>
+                <h2 className="text-4xl font-bold sm:text-5xl tracking-tight">Active Prototypes</h2>
+                <p className="mt-4 max-w-md text-muted-foreground">
+                  Our current batch of molecularly synthesized gelatos, available for immediate deployment.
+                </p>
+              </div>
+              <div className="text-xs font-mono text-primary/70">
+                [ STATUS: OPTIMIZED ]
+              </div>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {flavors.map((f) => (
                 <article
-                  key={r.name}
-                  className="group rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 p-6 transition-colors hover:border-ember/60"
+                  key={f.name}
+                  className="group relative rounded-2xl border border-border/50 bg-card/50 p-8 transition-all hover:-translate-y-2 hover:border-primary/50 hover:shadow-glow overflow-hidden"
                 >
-                  <div className="flex items-baseline justify-between">
-                    <h3 className="text-2xl text-primary-foreground">{r.name}</h3>
-                    <span className="font-display text-lg text-ember">{r.price}</span>
+                  <div className="absolute top-0 right-0 p-4">
+                    <div className="w-2 h-2 rounded-full animate-ping" style={{ backgroundColor: f.accent }}></div>
                   </div>
-                  <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary-foreground/60">
-                    {r.origin}
+                  <div className="flex items-baseline justify-between mb-2">
+                    <h3 className="text-2xl font-bold">{f.name}</h3>
+                    <span className="font-display text-xl text-primary">{f.price}</span>
+                  </div>
+                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-8">
+                    {f.origin}
                   </p>
-                  <p className="mt-6 text-sm leading-relaxed text-primary-foreground/80">
-                    {r.notes}
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-8">
+                    {f.notes}
                   </p>
-                  <span className="mt-6 inline-block rounded-full border border-ember/50 px-3 py-1 text-xs text-ember">
-                    {r.level} roast
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="h-px flex-1 bg-border/50"></span>
+                    <span className="text-[10px] font-mono text-primary uppercase">
+                      {f.level}
+                    </span>
+                  </div>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="how" className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl sm:text-4xl">A subscription that behaves</h2>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+        <section id="process" className="mx-auto max-w-6xl px-6 py-32">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold sm:text-5xl">Engineered for Euphoria</h2>
+            <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+              We've redesigned the ice cream supply chain from the atom up.
+            </p>
+          </div>
+          <div className="grid gap-12 md:grid-cols-3">
             {steps.map((s) => (
-              <div key={s.n} className="border-t border-border pt-6">
-                <span className="font-display text-sm text-ember">{s.n}</span>
-                <h3 className="mt-3 text-xl">{s.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
+              <div key={s.n} className="relative group">
+                <div className="text-6xl font-bold text-border/20 absolute -top-10 -left-4 group-hover:text-primary/10 transition-colors">{s.n}</div>
+                <h3 className="mt-4 text-2xl font-bold relative z-10">{s.t}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground relative z-10">{s.d}</p>
               </div>
             ))}
           </div>
-          <div className="mt-16 flex flex-col items-start gap-5 rounded-lg bg-card p-10 shadow-[var(--shadow-soft)] sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h3 className="text-2xl">First bag ships free</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                No commitment. Cancel after one cup if it isn't for you.
-              </p>
-            </div>
-            <Button variant="ember" size="lg" asChild>
-              <a href="#roasts">Start a box</a>
-            </Button>
+          <div className="mt-24 relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 p-12 md:p-20 text-center border border-primary/20">
+             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
+             <h3 className="text-3xl md:text-5xl font-bold mb-6">Join the Beta</h3>
+             <p className="mt-2 text-muted-foreground max-w-xl mx-auto mb-10">
+               Be among the first to receive weekly cryo-pod deliveries.
+             </p>
+             <Button size="lg" className="bg-primary text-primary-foreground px-12 rounded-full text-lg font-bold">
+               Initialize Subscription
+             </Button>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-xs text-muted-foreground sm:flex-row sm:justify-between">
-          <p>© {new Date().getFullYear()} Ember &amp; Oak Roasters</p>
-          <p>Roasted in small batches. Shipped everywhere.</p>
+      <footer className="border-t border-border/50 bg-background/50 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 text-xs text-muted-foreground sm:flex-row sm:justify-between items-center">
+          <div className="font-display text-lg font-bold tracking-tighter text-foreground">
+            CRYO<span className="text-gradient-cryo">CREAM</span>
+          </div>
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-primary transition-colors">Twitter</a>
+            <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+            <a href="#" className="hover:text-primary transition-colors">Discord</a>
+          </div>
+          <p>© {new Date().getFullYear()} Cryo-Cream Labs. All rights reserved.</p>
         </div>
       </footer>
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 9999, fontSize: '2rem', fontWeight: 'bold' }}>
-        troca pra amarelo
-      </div>
     </div>
   );
 }
