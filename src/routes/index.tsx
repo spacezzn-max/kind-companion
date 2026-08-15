@@ -36,7 +36,7 @@ const flavors = [
     notes: "70% dark matter chocolate, sea salt bits, fractal crunch",
     level: "Intense",
     price: "$14",
-    accent: "var(--neon-magenta)",
+    accent: "oklch(0.4 0.1 50)",
   },
   {
     name: "Plasma Mint",
@@ -44,7 +44,7 @@ const flavors = [
     notes: "Cold-press mint, liquid nitrogen swirl, carbon crystals",
     level: "Refresh",
     price: "$13",
-    accent: "var(--neon-lime)",
+    accent: "oklch(0.6 0.1 80)",
   },
 ];
 
