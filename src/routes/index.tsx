@@ -140,24 +140,29 @@ function Index() {
               {flavors.map((f) => (
                 <article
                   key={f.name}
-                  className="group relative rounded-2xl border border-border/50 bg-card/50 p-8 transition-all hover:-translate-y-2 hover:border-primary/50 hover:shadow-glow overflow-hidden"
+                  className="group relative rounded-2xl border border-white/5 bg-white/5 p-8 transition-all hover:bg-white/10 hover:border-primary/50 hover:shadow-glow overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 p-4">
-                    <div className="w-2 h-2 rounded-full animate-ping" style={{ backgroundColor: f.accent }}></div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[9px] font-mono text-white/40 uppercase tracking-tighter">Stability: 99.8%</span>
+                      <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: f.accent }}></div>
+                    </div>
                   </div>
                   <div className="flex items-baseline justify-between mb-2">
-                    <h3 className="text-2xl font-bold">{f.name}</h3>
+                    <h3 className="text-2xl font-bold tracking-tight">{f.name}</h3>
                     <span className="font-display text-xl text-primary">{f.price}</span>
                   </div>
-                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-8">
+                  <p className="text-[10px] uppercase tracking-widest text-primary/70 mb-8 font-mono">
                     {f.origin}
                   </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground mb-8">
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-8 min-h-[4rem]">
                     {f.notes}
                   </p>
-                  <div className="flex items-center gap-2">
-                    <span className="h-px flex-1 bg-border/50"></span>
-                    <span className="text-[10px] font-mono text-primary uppercase">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-white/40 uppercase">
+                      ID: {Math.random().toString(36).substring(7).toUpperCase()}
+                    </span>
+                    <span className="text-[10px] font-mono text-primary uppercase border border-primary/30 px-2 py-0.5 rounded">
                       {f.level}
                     </span>
                   </div>
@@ -174,12 +179,15 @@ function Index() {
               We've redesigned the ice cream supply chain from the atom up.
             </p>
           </div>
-          <div className="grid gap-12 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {steps.map((s) => (
-              <div key={s.n} className="relative group">
-                <div className="text-6xl font-bold text-border/20 absolute -top-10 -left-4 group-hover:text-primary/10 transition-colors">{s.n}</div>
-                <h3 className="mt-4 text-2xl font-bold relative z-10">{s.t}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground relative z-10">{s.d}</p>
+              <div key={s.n} className="relative group p-8 rounded-2xl border border-white/5 glass-panel transition-all hover:border-primary/30">
+                <div className="text-4xl font-mono font-bold text-primary/20 mb-4 group-hover:text-primary/40 transition-colors">{s.n}</div>
+                <h3 className="text-xl font-bold mb-4">{s.t}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{s.d}</p>
+                <div className="mt-6 w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div className="w-1/3 h-full bg-primary/30 group-hover:w-full transition-all duration-700"></div>
+                </div>
               </div>
             ))}
           </div>
@@ -209,6 +217,19 @@ function Index() {
           <p>© {new Date().getFullYear()} Cryo-Cream Labs. All rights reserved.</p>
         </div>
       </footer>
+      <div className="fixed bottom-0 left-0 w-full overflow-hidden bg-primary/10 border-t border-primary/20 h-8 flex items-center z-[60]">
+        <div className="animate-ticker whitespace-nowrap text-[10px] font-mono text-primary/80 uppercase tracking-[0.2em] flex gap-12">
+          <span>[ System Status: Nominal ]</span>
+          <span>[ Ambient Temp: -196.2°C ]</span>
+          <span>[ Molecular Synthesis Active ]</span>
+          <span>[ Grid Status: Stable ]</span>
+          <span>[ Quantum Yield: 99.98% ]</span>
+          <span>[ Nitrogen Levels: Optimal ]</span>
+          <span>[ System Status: Nominal ]</span>
+          <span>[ Ambient Temp: -196.2°C ]</span>
+          <span>[ Molecular Synthesis Active ]</span>
+        </div>
+      </div>
     </div>
   );
 }
