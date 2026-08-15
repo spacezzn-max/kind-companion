@@ -72,7 +72,7 @@
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 
-  --background: oklch(0.982 0.012 85);
+  --background: oklch(0.627 0.194 149.214);
   --foreground: oklch(0.23 0.035 45);
   --card: oklch(0.965 0.018 82);
   --card-foreground: oklch(0.23 0.035 45);
