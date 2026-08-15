@@ -16,7 +16,14 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        ember:
+          "bg-[image:var(--gradient-ember)] text-accent-foreground shadow-[var(--shadow-lift)] hover:brightness-105",
+        roast:
+          "bg-roast text-primary-foreground hover:bg-roast/90 shadow-[var(--shadow-soft)]",
+        quiet:
+          "border border-border/70 bg-transparent text-foreground hover:bg-secondary",
       },
+
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
