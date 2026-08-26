@@ -29,6 +29,7 @@ const flavors = [
     level: "Classic",
     price: "$12",
     accent: "oklch(0.5 0.1 60)",
+    id: "NV-0312",
   },
   {
     name: "Quantum Choc",
@@ -37,6 +38,7 @@ const flavors = [
     level: "Intense",
     price: "$14",
     accent: "oklch(0.4 0.1 50)",
+    id: "QC-5070",
   },
   {
     name: "Plasma Mint",
@@ -45,6 +47,7 @@ const flavors = [
     level: "Refresh",
     price: "$13",
     accent: "oklch(0.6 0.1 80)",
+    id: "PM-2196",
   },
 ];
 
@@ -160,7 +163,7 @@ function Index() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-mono text-white/40 uppercase">
-                      ID: {Math.random().toString(36).substring(7).toUpperCase()}
+                       ID: {f.id}
                     </span>
                     <span className="text-[10px] font-mono text-primary uppercase border border-primary/30 px-2 py-0.5 rounded">
                       {f.level}
@@ -214,7 +217,7 @@ function Index() {
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
             <a href="#" className="hover:text-primary transition-colors">Discord</a>
           </div>
-          <p>© {new Date().getFullYear()} Cryo-Cream Labs. All rights reserved.</p>
+           <p>© 2026 Cryo-Cream Labs. All rights reserved.</p>
         </div>
       </footer>
       <div className="fixed bottom-0 left-0 w-full overflow-hidden bg-primary/10 border-t border-primary/20 h-8 flex items-center z-[60]">
