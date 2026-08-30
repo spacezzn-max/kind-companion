@@ -28,7 +28,7 @@ const flavors = [
     notes: "Bioluminescent vanilla bean, ionized cream, ozone",
     level: "Classic",
     price: "$12",
-    accent: "oklch(0.5 0.1 60)",
+    accent: "var(--neon-cyan)",
     id: "NV-0312",
   },
   {
@@ -37,7 +37,7 @@ const flavors = [
     notes: "70% dark matter chocolate, sea salt bits, fractal crunch",
     level: "Intense",
     price: "$14",
-    accent: "oklch(0.4 0.1 50)",
+    accent: "var(--neon-magenta)",
     id: "QC-5070",
   },
   {
@@ -46,7 +46,8 @@ const flavors = [
     notes: "Cold-press mint, liquid nitrogen swirl, carbon crystals",
     level: "Refresh",
     price: "$13",
-    accent: "oklch(0.6 0.1 80)",
+    accent: "var(--neon-lime)",
+
     id: "PM-2196",
   },
 ];
