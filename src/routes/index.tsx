@@ -62,7 +62,9 @@ const steps = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      <Snowfall />
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 border-b border-border/50 backdrop-blur-md sticky top-0 z-50">
+
         <a href="/" className="font-display text-2xl font-bold tracking-tighter">
           MAR<span className="text-gradient-cryo">AZUL</span>
         </a>
