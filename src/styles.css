@@ -222,3 +222,28 @@
 
 
 
+
+@keyframes snowfall {
+  0% { transform: translate3d(0, -10vh, 0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translate3d(var(--snow-drift, 0px), 110vh, 0); opacity: 0.9; }
+}
+
+@utility snow-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 70;
+}
+
+@utility snow-flake {
+  position: absolute;
+  top: -10vh;
+  border-radius: 9999px;
+  background: white;
+  filter: blur(0.4px);
+  animation-name: snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
