@@ -72,12 +72,12 @@
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --background: oklch(0.14 0.04 240);
-  --foreground: oklch(0.96 0.01 230);
-  --card: oklch(0.19 0.05 240);
-  --card-foreground: oklch(0.96 0.01 230);
-  --popover: oklch(0.14 0.04 240);
-  --popover-foreground: oklch(0.96 0.01 230);
+  --background: oklch(0.14 0.05 155);
+  --foreground: oklch(0.96 0.01 155);
+  --card: oklch(0.19 0.06 155);
+  --card-foreground: oklch(0.96 0.01 155);
+  --popover: oklch(0.14 0.05 155);
+  --popover-foreground: oklch(0.96 0.01 155);
   --primary: oklch(0.7 0.15 230); /* Azul mar */
   --primary-foreground: oklch(0.14 0.04 240);
   --secondary: oklch(0.24 0.06 235);
