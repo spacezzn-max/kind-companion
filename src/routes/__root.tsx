@@ -77,18 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cryo-Cream — Molecular Gelato Lab" },
+      { title: "PixelTech — Loja de Informática" },
       {
         name: "description",
         content:
-          "Experience the next generation of ice cream. Molecularly synthesized and flash-frozen at absolute zero.",
+          "Loja de informática: notebooks, PCs gamer sob medida, peças, periféricos e assistência técnica com garantia.",
       },
-      { name: "author", content: "Cryo-Cream Labs" },
-      { property: "og:title", content: "Cryo-Cream — Molecular Gelato Lab" },
+      { name: "author", content: "PixelTech Informática" },
+      { property: "og:title", content: "PixelTech — Loja de Informática" },
       {
         property: "og:description",
-        content: "Single-origin beans roasted to order and shipped within 24 hours.",
+        content: "Hardware, PCs gamer sob medida e assistência técnica com garantia.",
       },
+
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
