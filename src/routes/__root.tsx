@@ -77,18 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PixelTech — Loja de Informática" },
+      { title: "Mar Azul Pesca — Loja e Pescarias Guiadas" },
       {
         name: "description",
         content:
-          "Loja de informática: notebooks, PCs gamer sob medida, peças, periféricos e assistência técnica com garantia.",
+          "Loja de pesca e pescarias guiadas: varas, molinetes, iscas e saídas de barco com guia local.",
       },
-      { name: "author", content: "PixelTech Informática" },
-      { property: "og:title", content: "PixelTech — Loja de Informática" },
+      { name: "author", content: "Mar Azul Pesca" },
+      { property: "og:title", content: "Mar Azul Pesca — Loja e Pescarias Guiadas" },
       {
         property: "og:description",
-        content: "Hardware, PCs gamer sob medida e assistência técnica com garantia.",
+        content: "Equipamentos de pesca e pescarias guiadas em água doce e salgada.",
       },
+
 
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
