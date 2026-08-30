@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { Snowfall } from "@/components/Snowfall";
 
 export const Route = createFileRoute("/")({
   head: () => ({
