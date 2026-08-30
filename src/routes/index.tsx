@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PixelTech — Loja de Informática e Hardware" },
+      { title: "Mar Azul Pesca — Equipamentos e Pescarias Guiadas" },
       {
         name: "description",
         content:
-          "Notebooks, PCs gamer, placas de vídeo e periféricos com garantia, montagem sob medida e assistência técnica especializada.",
+          "Varas, molinetes, iscas e pescarias guiadas em água doce e salgada. Equipamento testado por quem pesca de verdade.",
       },
-      { property: "og:title", content: "PixelTech — Loja de Informática e Hardware" },
+      { property: "og:title", content: "Mar Azul Pesca — Equipamentos e Pescarias Guiadas" },
       {
         property: "og:description",
-        content: "Hardware, PCs gamer sob medida e assistência técnica com garantia.",
+        content: "Loja de pesca e pescarias guiadas: varas, molinetes, iscas e barcos com guia local.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -24,38 +24,38 @@ export const Route = createFileRoute("/")({
 
 const produtos = [
   {
-    name: "PC Gamer Neon",
-    origin: "Ryzen 7 · RTX 4070 · 32GB",
-    notes: "Montagem sob medida, refrigeração líquida e cable management caprichado.",
-    level: "Gamer",
-    price: "R$ 8.499",
-    accent: "var(--neon-magenta)",
-    id: "PC-4070",
-  },
-  {
-    name: "Notebook Work Pro",
-    origin: "Core i7 · 16GB · SSD 1TB",
-    notes: "Leve, tela IPS 100% sRGB e bateria para o dia inteiro de trabalho.",
-    level: "Trabalho",
-    price: "R$ 5.190",
+    name: "Kit Pesqueiro",
+    origin: "Vara 1,80m · Molinete 4000",
+    notes: "Combo ideal para tilápia e tambaqui em pesqueiros, com linha e iscas inclusas.",
+    level: "Água doce",
+    price: "R$ 389",
     accent: "var(--neon-cyan)",
-    id: "NB-1671",
+    id: "KP-1804",
   },
   {
-    name: "Setup Periféricos",
-    origin: "Teclado mecânico · Mouse 26K DPI",
-    notes: "Kit completo com headset, mousepad XL e iluminação RGB sincronizada.",
-    level: "Combo",
-    price: "R$ 1.290",
+    name: "Set Costeiro",
+    origin: "Vara 2,40m · Carretilha 200",
+    notes: "Ação média-pesada para robalo e pescada na praia, com componentes anticorrosão.",
+    level: "Água salgada",
+    price: "R$ 1.150",
+    accent: "var(--neon-magenta)",
+    id: "SC-2400",
+  },
+  {
+    name: "Caixa de Iscas Pro",
+    origin: "36 iscas artificiais",
+    notes: "Plugs, jigs e softbaits selecionados para dourado, traíra e tucunaré.",
+    level: "Artificiais",
+    price: "R$ 279",
     accent: "var(--neon-lime)",
-    id: "KIT-0290",
+    id: "IS-0036",
   },
 ];
 
 const steps = [
-  { n: "01", t: "Você escolhe", d: "Monte seu PC no balcão ou fale com a gente pelo WhatsApp: indicamos as peças certas para o seu uso." },
-  { n: "02", t: "Montagem e testes", d: "Montagem profissional, aplicação de pasta térmica premium e testes de estresse antes da entrega." },
-  { n: "03", t: "Entrega e suporte", d: "Entrega rápida na região e 12 meses de garantia com assistência técnica na loja." },
+  { n: "01", t: "Escolha o roteiro", d: "Represa, rio ou pesca oceânica: montamos o roteiro conforme a espécie que você quer fisgar." },
+  { n: "02", t: "Equipamento pronto", d: "Barco, coletes, varas e iscas revisados antes de cada saída — é só chegar e embarcar." },
+  { n: "03", t: "Guia na água", d: "Guia local experiente indicando os pontos, técnicas e horários de melhor movimento." },
 ];
 
 function Index() {
@@ -63,18 +63,18 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 border-b border-border/50 backdrop-blur-md sticky top-0 z-50">
         <a href="/" className="font-display text-2xl font-bold tracking-tighter">
-          PIXEL<span className="text-gradient-cryo">TECH</span>
+          MAR<span className="text-gradient-cryo">AZUL</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground sm:flex">
-          <a href="#produtos" className="transition-colors hover:text-primary">
-            Produtos
+          <a href="#loja" className="transition-colors hover:text-primary">
+            Loja
           </a>
-          <a href="#servicos" className="transition-colors hover:text-primary">
-            Serviços
+          <a href="#pescarias" className="transition-colors hover:text-primary">
+            Pescarias
           </a>
         </nav>
         <Button variant="outline" size="sm" className="border-primary/50 hover:bg-primary/10 hover:text-primary">
-          Falar no WhatsApp
+          Reservar saída
         </Button>
       </header>
 
@@ -82,28 +82,28 @@ function Index() {
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-16 lg:grid-cols-2 lg:pt-24">
           <div className="relative z-10">
             <div className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent mb-6">
-              Hardware com garantia
+              Água doce e salgada
             </div>
             <h1 className="text-6xl font-bold leading-[1] sm:text-7xl lg:text-8xl tracking-tighter">
-              Sua loja de
-              <span className="text-gradient-cryo block"> informática.</span>
+              A melhor pesca
+              <span className="text-gradient-cryo block"> começa aqui.</span>
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Notebooks, PCs gamer montados sob medida, upgrades, peças e assistência técnica. Atendimento de quem entende de hardware de verdade.
+              Equipamentos selecionados, iscas que funcionam e pescarias guiadas com barco e guia local. Do pesqueiro ao mar aberto.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 rounded-full">
-                Ver produtos
+                Ver equipamentos
               </Button>
               <Button variant="ghost" size="lg" className="text-foreground hover:bg-accent/10 px-8 rounded-full">
-                Montar meu PC
+                Agendar pescaria
               </Button>
             </div>
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border/30 pt-8">
               {[
-                ["12 meses", "Garantia"],
-                ["24h", "Orçamento"],
-                ["+3.000", "PCs montados"],
+                ["18 anos", "Na água"],
+                ["+40", "Pontos mapeados"],
+                ["4.9★", "Avaliação"],
               ].map(([v, l]) => (
                 <div key={l}>
                   <div className="font-display text-3xl font-bold text-foreground">{v}</div>
@@ -116,24 +116,24 @@ function Index() {
             <div className="absolute inset-0 bg-accent/20 animate-pulse-glow rounded-full"></div>
             <div className="relative aspect-square rounded-3xl glass-panel flex items-center justify-center p-12 overflow-hidden shadow-2xl">
               <div className="w-full h-full relative flex items-center justify-center">
-                <div className="absolute w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-pulse"></div>
                 <div className="relative w-48 h-48 border border-primary/50 rounded-2xl animate-float flex items-center justify-center backdrop-blur-md overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/40 opacity-70"></div>
-                  <div className="text-3xl font-bold -rotate-45 text-primary-foreground tracking-widest">SETUP</div>
+                  <div className="text-3xl font-bold -rotate-45 text-primary-foreground tracking-widest">PESCA</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="produtos" className="bg-deep-gradient py-32 relative overflow-hidden">
+        <section id="loja" className="bg-deep-gradient py-32 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           <div className="mx-auto max-w-6xl px-6 relative z-10">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div>
-                <h2 className="text-4xl font-bold sm:text-5xl tracking-tight">Destaques da loja</h2>
+                <h2 className="text-4xl font-bold sm:text-5xl tracking-tight">Kits que pescam</h2>
                 <p className="mt-4 max-w-md text-muted-foreground">
-                  Configurações prontas para jogar, trabalhar e criar — todas testadas antes de sair da bancada.
+                  Combos montados por guias, prontos para o pesqueiro, o rio ou a beira da praia.
                 </p>
               </div>
               <div className="text-xs font-mono text-accent/80">[ ESTOQUE DISPONÍVEL ]</div>
@@ -168,11 +168,11 @@ function Index() {
           </div>
         </section>
 
-        <section id="servicos" className="mx-auto max-w-6xl px-6 py-32">
+        <section id="pescarias" className="mx-auto max-w-6xl px-6 py-32">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold sm:text-5xl">Como funciona</h2>
+            <h2 className="text-4xl font-bold sm:text-5xl">Como funciona a pescaria</h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-              Do orçamento à entrega, sem enrolação e com suporte de verdade.
+              Saídas de meio período ou dia inteiro, com tudo incluso. Iniciante ou veterano, tem roteiro pra você.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
@@ -188,12 +188,12 @@ function Index() {
             ))}
           </div>
           <div className="mt-24 relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/15 to-accent/20 p-12 md:p-20 text-center border border-primary/25">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">Precisa de um upgrade?</h3>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6">Bora pra água?</h3>
             <p className="mt-2 text-muted-foreground max-w-xl mx-auto mb-10">
-              Mande a configuração atual do seu PC e monte um orçamento sem compromisso.
+              Escolha a data e a espécie alvo — a gente cuida do barco, do equipamento e do ponto certo.
             </p>
             <Button size="lg" className="bg-primary text-primary-foreground px-12 rounded-full text-lg font-bold">
-              Pedir orçamento
+              Reservar pescaria
             </Button>
           </div>
         </section>
@@ -202,25 +202,24 @@ function Index() {
       <footer className="border-t border-border/50 bg-background/50 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 text-xs text-muted-foreground sm:flex-row sm:justify-between items-center">
           <div className="font-display text-lg font-bold tracking-tighter text-foreground">
-            PIXEL<span className="text-gradient-cryo">TECH</span>
+            MAR<span className="text-gradient-cryo">AZUL</span>
           </div>
           <div className="flex gap-8">
             <a href="#" className="hover:text-primary transition-colors">WhatsApp</a>
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
             <a href="#" className="hover:text-primary transition-colors">Loja física</a>
           </div>
-          <p>© 2026 PixelTech Informática. Todos os direitos reservados.</p>
+          <p>© 2026 Mar Azul Pesca. Todos os direitos reservados.</p>
         </div>
       </footer>
       <div className="fixed bottom-0 left-0 w-full overflow-hidden bg-accent/15 border-t border-accent/30 h-8 flex items-center z-[60]">
         <div className="animate-ticker whitespace-nowrap text-[10px] font-mono text-primary uppercase tracking-[0.2em] flex gap-12">
-          <span>[ Frete grátis acima de R$ 499 ]</span>
-          <span>[ Parcelamos em 12x ]</span>
-          <span>[ Formatação e limpeza a partir de R$ 89 ]</span>
-          <span>[ Garantia de 12 meses ]</span>
-          <span>[ Orçamento em até 24h ]</span>
-          <span>[ Frete grátis acima de R$ 499 ]</span>
-          <span>[ Parcelamos em 12x ]</span>
+          <span>[ Maré alta 06:20 · 18:40 ]</span>
+          <span>[ Frete grátis acima de R$ 399 ]</span>
+          <span>[ Saídas diárias às 5h ]</span>
+          <span>[ Licença de pesca inclusa ]</span>
+          <span>[ Maré alta 06:20 · 18:40 ]</span>
+          <span>[ Frete grátis acima de R$ 399 ]</span>
         </div>
       </div>
     </div>
