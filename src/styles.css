@@ -72,35 +72,35 @@
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --background: oklch(0.14 0.04 150);
-  --foreground: oklch(0.97 0.01 150);
-  --card: oklch(0.18 0.05 150);
-  --card-foreground: oklch(0.97 0.01 150);
-  --popover: oklch(0.14 0.04 150);
-  --popover-foreground: oklch(0.97 0.01 150);
-  --primary: oklch(0.62 0.22 150); /* Verde */
-  --primary-foreground: oklch(0.98 0.01 150);
-  --secondary: oklch(0.24 0.06 150);
-  --secondary-foreground: oklch(0.97 0.01 150);
-  --muted: oklch(0.2 0.04 150);
-  --muted-foreground: oklch(0.78 0.03 150);
-  --accent: oklch(0.72 0.18 150); /* Verde claro */
-  --accent-foreground: oklch(0.12 0.04 150);
+  --background: oklch(0.14 0.04 95);
+  --foreground: oklch(0.97 0.01 95);
+  --card: oklch(0.18 0.05 95);
+  --card-foreground: oklch(0.97 0.01 95);
+  --popover: oklch(0.14 0.04 95);
+  --popover-foreground: oklch(0.97 0.01 95);
+  --primary: oklch(0.86 0.17 95); /* Amarelo */
+  --primary-foreground: oklch(0.18 0.05 95);
+  --secondary: oklch(0.24 0.06 95);
+  --secondary-foreground: oklch(0.97 0.01 95);
+  --muted: oklch(0.2 0.04 95);
+  --muted-foreground: oklch(0.78 0.03 95);
+  --accent: oklch(0.78 0.15 80); /* Âmbar */
+  --accent-foreground: oklch(0.12 0.04 95);
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(0.98 0.01 25);
-  --border: oklch(0.34 0.07 150);
-  --input: oklch(0.34 0.07 150);
-  --ring: oklch(0.62 0.22 150);
+  --border: oklch(0.34 0.07 95);
+  --input: oklch(0.34 0.07 95);
+  --ring: oklch(0.86 0.17 95);
 
-  --neon-cyan: oklch(0.75 0.18 150);
-  --neon-magenta: oklch(0.65 0.20 160);
-  --neon-lime: oklch(0.85 0.14 135);
+  --neon-cyan: oklch(0.75 0.18 95);
+  --neon-magenta: oklch(0.72 0.17 70);
+  --neon-lime: oklch(0.90 0.16 105);
 
   --gradient-cryo: linear-gradient(135deg, var(--neon-lime), var(--neon-cyan));
-  --gradient-deep: linear-gradient(180deg, oklch(0.18 0.05 150), oklch(0.1 0.03 150));
+  --gradient-deep: linear-gradient(180deg, oklch(0.18 0.05 95), oklch(0.1 0.03 95));
 
-  --shadow-glow: 0 0 24px oklch(0.62 0.22 150 / 0.45);
-  --shadow-lift: 0 20px 50px -18px oklch(0.08 0.03 150 / 0.6);
+  --shadow-glow: 0 0 24px oklch(0.86 0.17 95 / 0.45);
+  --shadow-lift: 0 20px 50px -18px oklch(0.08 0.03 95 / 0.6);
 
 
 
