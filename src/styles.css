@@ -99,8 +99,8 @@
   --gradient-cryo: linear-gradient(135deg, var(--neon-lime), var(--neon-cyan));
   --gradient-deep: linear-gradient(180deg, oklch(0.18 0.05 150), oklch(0.1 0.03 150));
 
-  --shadow-glow: 0 0 24px oklch(0.62 0.22150 / 0.45);
-  --shadow-lift: 0 20px 50px -18px oklch(0.08 0.03150 / 0.6);
+  --shadow-glow: 0 0 24px oklch(0.62 0.22 150 / 0.45);
+  --shadow-lift: 0 20px 50px -18px oklch(0.08 0.03 150 / 0.6);
 
 
 
