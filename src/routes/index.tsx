@@ -30,7 +30,7 @@ const produtos = [
     notes: "Combo ideal para tilápia e tambaqui em pesqueiros, com linha e iscas inclusas.",
     level: "Água doce",
     price: "R$ 389",
-    accent: "var(--neon-cyan)",
+    accent: "var(--neon-red)",
     id: "KP-1804",
   },
   {
@@ -39,7 +39,7 @@ const produtos = [
     notes: "Ação média-pesada para robalo e pescada na praia, com componentes anticorrosão.",
     level: "Água salgada",
     price: "R$ 1.150",
-    accent: "var(--neon-magenta)",
+    accent: "var(--neon-orange)",
     id: "SC-2400",
   },
   {
