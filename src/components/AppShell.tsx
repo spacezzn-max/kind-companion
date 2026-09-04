@@ -46,7 +46,7 @@ export function AppShell({
               <Link
                 key={to}
                 to={to}
-                activeOptions={{ exact: to === "/" }}
+                activeOptions={{ exact: true }}
                 className="text-muted-foreground hover:bg-sidebar-accent hover:text-foreground group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all"
                 activeProps={{
                   className:
@@ -82,7 +82,7 @@ export function AppShell({
               <Link
                 key={to}
                 to={to}
-                activeOptions={{ exact: to === "/" }}
+                activeOptions={{ exact: true }}
                 className="border-border text-muted-foreground rounded-full border px-4 py-1.5 text-xs whitespace-nowrap"
                 activeProps={{ className: "border-primary/50 text-foreground bg-primary/10" }}
               >
