@@ -106,7 +106,7 @@ export const devices: Device[] = [
     name: "ATLAS-WS-04",
     os: "Windows 11 Pro",
     lastSeen: "2026-09-04 17:42",
-    ip: "189.24.11.７".replace("７", "7"),
+    ip: "189.24.11.7",
     active: true,
   },
   {
