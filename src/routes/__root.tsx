@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { Toaster } from "@/components/ui/sonner";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -77,17 +78,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Mar Azul Pesca — Loja e Pescarias Guiadas" },
+      { title: "SPEED License Manager" },
       {
         name: "description",
         content:
-          "Loja de pesca e pescarias guiadas: varas, molinetes, iscas e saídas de barco com guia local.",
+          "Painel para gerenciar licenças, planos e ativações do aplicativo desktop SPEED.",
       },
-      { name: "author", content: "Mar Azul Pesca" },
-      { property: "og:title", content: "Mar Azul Pesca — Loja e Pescarias Guiadas" },
+      { name: "author", content: "SPEED" },
+      { property: "og:title", content: "SPEED License Manager" },
       {
         property: "og:description",
-        content: "Equipamentos de pesca e pescarias guiadas em água doce e salgada.",
+        content: "Gerencie licenças, planos e dispositivos ativados do SPEED em um só lugar.",
       },
 
 
@@ -136,6 +137,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <Toaster richColors position="top-right" />
     </QueryClientProvider>
   );
 }

@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DispositivosRouteImport } from './routes/dispositivos'
+import { Route as LicencasIndexRouteImport } from './routes/licencas.index'
+import { Route as LicencasNovaRouteImport } from './routes/licencas.nova'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DispositivosRoute = DispositivosRouteImport.update({
+  id: '/dispositivos',
+  path: '/dispositivos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LicencasIndexRoute = LicencasIndexRouteImport.update({
+  id: '/licencas/',
+  path: '/licencas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LicencasNovaRoute = LicencasNovaRouteImport.update({
+  id: '/licencas/nova',
+  path: '/licencas/nova',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dispositivos': typeof DispositivosRoute
+  '/licencas/nova': typeof LicencasNovaRoute
+  '/licencas/': typeof LicencasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dispositivos': typeof DispositivosRoute
+  '/licencas/nova': typeof LicencasNovaRoute
+  '/licencas': typeof LicencasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dispositivos': typeof DispositivosRoute
+  '/licencas/nova': typeof LicencasNovaRoute
+  '/licencas/': typeof LicencasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/dispositivos' | '/licencas/nova' | '/licencas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/dispositivos' | '/licencas/nova' | '/licencas'
+  id: '__root__' | '/' | '/dispositivos' | '/licencas/nova' | '/licencas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DispositivosRoute: typeof DispositivosRoute
+  LicencasNovaRoute: typeof LicencasNovaRoute
+  LicencasIndexRoute: typeof LicencasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dispositivos': {
+      id: '/dispositivos'
+      path: '/dispositivos'
+      fullPath: '/dispositivos'
+      preLoaderRoute: typeof DispositivosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/licencas/': {
+      id: '/licencas/'
+      path: '/licencas'
+      fullPath: '/licencas/'
+      preLoaderRoute: typeof LicencasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/licencas/nova': {
+      id: '/licencas/nova'
+      path: '/licencas/nova'
+      fullPath: '/licencas/nova'
+      preLoaderRoute: typeof LicencasNovaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DispositivosRoute: DispositivosRoute,
+  LicencasNovaRoute: LicencasNovaRoute,
+  LicencasIndexRoute: LicencasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
