@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LicencasIndexRouteImport } from './routes/licencas.index'
+import { Route as LicencasNovaRouteImport } from './routes/licencas.nova'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const LicencasIndexRoute = LicencasIndexRouteImport.update({
   path: '/licencas/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LicencasNovaRoute = LicencasNovaRouteImport.update({
+  id: '/licencas/nova',
+  path: '/licencas/nova',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/licencas/nova': typeof LicencasNovaRoute
   '/licencas/': typeof LicencasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/licencas/nova': typeof LicencasNovaRoute
   '/licencas': typeof LicencasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/licencas/nova': typeof LicencasNovaRoute
   '/licencas/': typeof LicencasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/licencas/'
+  fullPaths: '/' | '/licencas/nova' | '/licencas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/licencas'
-  id: '__root__' | '/' | '/licencas/'
+  to: '/' | '/licencas/nova' | '/licencas'
+  id: '__root__' | '/' | '/licencas/nova' | '/licencas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LicencasNovaRoute: typeof LicencasNovaRoute
   LicencasIndexRoute: typeof LicencasIndexRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LicencasIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/licencas/nova': {
+      id: '/licencas/nova'
+      path: '/licencas/nova'
+      fullPath: '/licencas/nova'
+      preLoaderRoute: typeof LicencasNovaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LicencasNovaRoute: LicencasNovaRoute,
   LicencasIndexRoute: LicencasIndexRoute,
 }
 export const routeTree = rootRouteImport
